@@ -4,7 +4,7 @@ description: "In this project I compare different Neural Networks architectures 
 pubDate: "April 19 2024"
 heroImage: "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*Je65TdJbDm55KQCja7rPVw.png"
 badge: "SC4001"
-tags: ["python"]
+tags: ["python", "NTU"]
 ---
 
 ## 1 Introduction
@@ -41,9 +41,6 @@ dictions for the S&P500 index. The S&P500 index is the market-capitalization-wei
 the 500 largest companies in USA and serves as a great indication of the performance of the stock
 market in general. The data is sequential by nature which needs to be considered when building the
 models.
-
-##### 1
-
 
 ## 2 Literature
 
@@ -85,10 +82,6 @@ potential than the RNNs used. The potential of attention-based neural networks w
 MLPs, CNNs, and RNNs by Gao et al. (2020), where the results indicated substantial potential for
 the former method.
 
-```
-2
-```
-
 ## 3 Model Specifications
 
 ### 3.1 Overview
@@ -99,15 +92,15 @@ benchmark for this comparison. The rationale for selecting this foundational mod
 and general limitations for time series prediction, providing a baseline against which to measure the
 more specialized capabilities of the other models.
 
-DNNsconsist of multiple layers of neurons, each layer connected to the next, forming a deep architec-
+DNNs consist of multiple layers of neurons, each layer connected to the next, forming a deep architec-
 ture. This structure allows for the learning of complex and high-level features from input data through
 a process of weighted inputs and nonlinear activations.
 
-CNNsare specialized for processing structured grid data, generally images. Their architecture includes
+CNNs are specialized for processing structured grid data, generally images. Their architecture includes
 convolutional layers that apply filters to the input, pooling layers that reduce dimensions, and fully
 connected layers that make predictions.
 
-LSTMsare an advanced type of RNN and are designed to avoid the long-term dependency problem,
+LSTMs are an advanced type of RNN and are designed to avoid the long-term dependency problem,
 enabling them to remember information for extended periods. Their architecture includes memory cells
 that store state over time, and gates that control the flow of information in and out of the cell.
 
@@ -129,9 +122,6 @@ information over the full extent of its availability, in this case from 1993-01-
 data contains 7857 rows and 6 columns. The columns are Open, High, Low Close, Adjusted Close and
 Volume for the ETF at that particular day.
 
-```
-3
-```
 
 From this data, 10 technical indicators were calculated and used as features. These are:
 
@@ -162,16 +152,6 @@ on temporal dependencies.
 
 Thus the input and output for each model looks as following:
 
-### 3.3 Models
-
-Since the goal of the study is to test how different architectures affect performance in stock price
-prediction, it is crucial that the models have approximately the same number of trainable parameters.
-Therefore, it was decided that each model should have around 200,000 trainable parameters, in Table
-2 a overview of the size of the models are displayed.
-
-##### 4
-
-
 ```
 Table 1: Model Input and Output Specifications
 ```
@@ -185,6 +165,14 @@ LSTM 30 × 11 1
 GRU 30 × 11 1
 Transformer 30 × 11 1
 ```
+
+### 3.3 Models
+
+Since the goal of the study is to test how different architectures affect performance in stock price
+prediction, it is crucial that the models have approximately the same number of trainable parameters.
+Therefore, it was decided that each model should have around 200,000 trainable parameters, in Table
+2 a overview of the size of the models are displayed.
+
 ```
 Table 2: Number of Trainable Parameters
 ```
@@ -196,13 +184,26 @@ LSTM 179,
 GRU 219,
 Transformer 178,
 ```
+
 #### 3.3.1 DNN
 
 This DNN comprises four dense layers, configured as follows:
 
 ```
-Figure 1: DNN summary
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_38 (Dense)            (None, 512)               6144      
+                                                                 
+ dense_39 (Dense)            (None, 256)               131328    
+                                                                 
+ dense_40 (Dense)            (None, 256)               65792     
+                                                                 
+ dense_41 (Dense)            (None, 1)                 257       
+                                                                 
+=================================================================
 ```
+
 #### 3.3.2 CNN
 
 The CNN architecture consists of the following layers:
@@ -211,35 +212,165 @@ The CNN architecture consists of the following layers:
 
 
 ```
-Figure 2: CNN summary
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d_14 (Conv1D)          (None, 28, 128)           4352      
+                                                                 
+ max_pooling1d_8 (MaxPoolin  (None, 14, 128)           0         
+ g1D)                                                            
+                                                                 
+ conv1d_15 (Conv1D)          (None, 12, 128)           49280     
+                                                                 
+ max_pooling1d_9 (MaxPoolin  (None, 6, 128)            0         
+ g1D)                                                            
+                                                                 
+ flatten_4 (Flatten)         (None, 768)               0         
+                                                                 
+ dense_62 (Dense)            (None, 164)               126116    
+                                                                 
+ dense_63 (Dense)            (None, 1)                 165       
+                                                                 
+=================================================================
 ```
 #### 3.3.3 LSTM
 
 This LSTM architecture consists of the following components:
 
 ```
-Figure 3: LSTM summary
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm_1 (LSTM)               (None, 200)               169600    
+                                                                 
+ dense_74 (Dense)            (None, 50)                10050     
+                                                                 
+ dense_75 (Dense)            (None, 1)                 51        
+                                                                 
+=================================================================
+
 ```
 #### 3.3.4 GRU
 
 The GRU model is composed as follows:
 
 ```
-Figure 4: GRU summary
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ gru_1 (GRU)                 (None, 256)               206592    
+                                                                 
+ dense_86 (Dense)            (None, 50)                12850     
+                                                                 
+ dense_87 (Dense)            (None, 1)                 51        
+                                                                 
+=================================================================
 ```
 #### 3.3.5 Transformer
 
 The architecture of the Transformer model is composed as follows:
 
-##### 6
-
-
-Figure 5: First part of the Transformer model sum-
-mary
 
 ```
-Figure 6: Second part of the Transformer model
-summary
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_2 (InputLayer)        [(None, 30, 11)]             0         []                            
+                                                                                                  
+ layer_normalization_6 (Lay  (None, 30, 11)               22        ['input_2[0][0]']             
+ erNormalization)                                                                                 
+                                                                                                  
+ multi_head_attention_3 (Mu  (None, 30, 11)               48139     ['layer_normalization_6[0][0]'
+ ltiHeadAttention)                                                  , 'layer_normalization_6[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_7 (Dropout)         (None, 30, 11)               0         ['multi_head_attention_3[0][0]
+                                                                    ']                            
+                                                                                                  
+ tf.__operators__.add_6 (TF  (None, 30, 11)               0         ['dropout_7[0][0]',           
+ OpLambda)                                                           'input_2[0][0]']             
+                                                                                                  
+ layer_normalization_7 (Lay  (None, 30, 11)               22        ['tf.__operators__.add_6[0][0]
+ erNormalization)                                                   ']                            
+                                                                                                  
+ conv1d_26 (Conv1D)          (None, 30, 256)              3072      ['layer_normalization_7[0][0]'
+                                                                    ]                             
+                                                                                                  
+ dropout_8 (Dropout)         (None, 30, 256)              0         ['conv1d_26[0][0]']           
+                                                                                                  
+ conv1d_27 (Conv1D)          (None, 30, 11)               2827      ['dropout_8[0][0]']           
+                                                                                                  
+ tf.__operators__.add_7 (TF  (None, 30, 11)               0         ['conv1d_27[0][0]',           
+ OpLambda)                                                           'tf.__operators__.add_6[0][0]
+                                                                    ']                            
+                                                                                                  
+ layer_normalization_8 (Lay  (None, 30, 11)               22        ['tf.__operators__.add_7[0][0]
+ erNormalization)                                                   ']                            
+                                                                                                  
+ multi_head_attention_4 (Mu  (None, 30, 11)               48139     ['layer_normalization_8[0][0]'
+ ltiHeadAttention)                                                  , 'layer_normalization_8[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_9 (Dropout)         (None, 30, 11)               0         ['multi_head_attention_4[0][0]
+                                                                    ']                            
+                                                                                                  
+ tf.__operators__.add_8 (TF  (None, 30, 11)               0         ['dropout_9[0][0]',           
+ OpLambda)                                                           'tf.__operators__.add_7[0][0]
+                                                                    ']                            
+                                                                                                  
+ layer_normalization_9 (Lay  (None, 30, 11)               22        ['tf.__operators__.add_8[0][0]
+ erNormalization)                                                   ']                            
+                                                                                                  
+ conv1d_28 (Conv1D)          (None, 30, 256)              3072      ['layer_normalization_9[0][0]'
+                                                                    ]                             
+                                                                                                  
+ dropout_10 (Dropout)        (None, 30, 256)              0         ['conv1d_28[0][0]']           
+                                                                                                  
+ conv1d_29 (Conv1D)          (None, 30, 11)               2827      ['dropout_10[0][0]']          
+                                                                                                  
+ tf.__operators__.add_9 (TF  (None, 30, 11)               0         ['conv1d_29[0][0]',           
+ OpLambda)                                                           'tf.__operators__.add_8[0][0]
+                                                                    ']                            
+                                                                                                  
+ layer_normalization_10 (La  (None, 30, 11)               22        ['tf.__operators__.add_9[0][0]
+ yerNormalization)                                                  ']                            
+                                                                                                  
+ multi_head_attention_5 (Mu  (None, 30, 11)               48139     ['layer_normalization_10[0][0]
+ ltiHeadAttention)                                                  ',                            
+                                                                     'layer_normalization_10[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_11 (Dropout)        (None, 30, 11)               0         ['multi_head_attention_5[0][0]
+                                                                    ']                            
+                                                                                                  
+ tf.__operators__.add_10 (T  (None, 30, 11)               0         ['dropout_11[0][0]',          
+ FOpLambda)                                                          'tf.__operators__.add_9[0][0]
+                                                                    ']                            
+                                                                                                  
+ layer_normalization_11 (La  (None, 30, 11)               22        ['tf.__operators__.add_10[0][0
+ yerNormalization)                                                  ]']                           
+                                                                                                  
+ conv1d_30 (Conv1D)          (None, 30, 256)              3072      ['layer_normalization_11[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_12 (Dropout)        (None, 30, 256)              0         ['conv1d_30[0][0]']           
+                                                                                                  
+ conv1d_31 (Conv1D)          (None, 30, 11)               2827      ['dropout_12[0][0]']          
+                                                                                                  
+ tf.__operators__.add_11 (T  (None, 30, 11)               0         ['conv1d_31[0][0]',           
+ FOpLambda)                                                          'tf.__operators__.add_10[0][0
+                                                                    ]']                           
+                                                                                                  
+ global_average_pooling1d_1  (None, 30)                   0         ['tf.__operators__.add_11[0][0
+  (GlobalAveragePooling1D)                                          ]']                           
+                                                                                                  
+ dense_98 (Dense)            (None, 512)                  15872     ['global_average_pooling1d_1[0
+                                                                    ][0]']                        
+                                                                                                  
+ dropout_13 (Dropout)        (None, 512)                  0         ['dense_98[0][0]']            
+                                                                                                  
+ dense_99 (Dense)            (None, 1)                    513       ['dropout_13[0][0]']          
+                                                                                                  
+==================================================================================================
 ```
 ### 3.4 Training & Evaluation
 
@@ -261,19 +392,9 @@ penalizing larger mistakes, which is critical in financial decision-making. MAPE
 offers a clear, scale-independent percentage-based measure of accuracy. Together, they provide a
 comprehensive assessment of model performance in forecasting stock prices.
 
-##### 7
+SEE PAPER FOR FIGURES
 
 
-```
-(a) Fold 1 (b) Fold 2
-```
-```
-(c) Fold 3 (d) Fold 4
-```
-```
-(e) Fold 5
-Figure 7: Dataset Split for Folds 1 to 5
-```
 ## 4 Results & Analysis
 
 ### 4.1 Performance Overview
@@ -331,12 +452,7 @@ and 4, the CNN performs the best among the models, which is also evident in the 
 plots (see Appendix). However, what’s peculiar is the smoothness of the curve for fold 5 (see Appendix),
 which is atypical for time-series data such as this. Additionally, the GRU also performs fairly well, and
 the graphs look very similar except for the underprediction occurring. The model that performs the
-worst is the Transformer model, according to both MAPE and RMSE. Yet, the graphs indicate that
-
-##### 9
-
-
-the LSTM model is much more unstable, particularly evident in folds 1 and 5 (see Appendix).
+worst is the Transformer model, according to both MAPE and RMSE. Yet, the graphs indicate that the LSTM model is much more unstable, particularly evident in folds 1 and 5 (see Appendix).
 
 In summary, all models evaluated in the study perform rather poorly, with the best model averaging
 a mean percentage error of 8.5%, a rate that would not be viable in practical applications. While the
@@ -365,8 +481,6 @@ for more hyperparameter tuning.
 Among the four studied models, the CNN performs the best, but there are concerns about the nature
 of the actual vs. predictions graphs. All models underpredict, and the GRU model is the one that the
 author believes has the best potential.
-
-##### 10
 
 
 ## 6 References
@@ -408,77 +522,10 @@ ings of the Second International Afro-European Conference for Industrial Advance
 Advances in Intelligent Systems and Computing, vol 427. Springer, Cham. https://doi.org/10.1007/978-
 3-319-29504-6 45
 
-```
-i
-```
-
 Wang, C., Chen, Y., Zhang, S., & Zhang, Q. (2022). Stock market index prediction using deep Trans-
 former model. Expert Systems with Applications, 208, 118128. https://doi.org/10.1016/j.eswa.2022.
 
-```
-ii
-```
 
 ## Appendix
 
-### DNN
-
-```
-(a) Fold 1 (b) Fold 2 (c) Fold 3
-```
-```
-(d) Fold 4 (e) Fold 5
-```
-```
-Figure 8: Prediction vs Actual for Folds 1 to 5 for DNN
-```
-### CNN
-
-```
-(a) Fold 1 (b) Fold 2 (c) Fold 3
-```
-```
-(d) Fold 4 (e) Fold 5
-```
-```
-Figure 9: Prediction vs Actual for Folds 1 to 5 for CNN
-```
-```
-iii
-```
-
-### LSTM
-
-```
-(a) Fold 1 (b) Fold 2 (c) Fold 3
-```
-```
-(d) Fold 4 (e) Fold 5
-Figure 10: Prediction vs Actual for Folds 1 to 5 for LSTM
-```
-### GRU
-
-```
-(a) Fold 1 (b) Fold 2 (c) Fold 3
-```
-```
-(d) Fold 4 (e) Fold 5
-Figure 11: Prediction vs Actual for Folds 1 to 5 for GRU
-```
-```
-iv
-```
-
-### Transformer
-
-```
-(a) Fold 1 (b) Fold 2 (c) Fold 3
-```
-```
-(d) Fold 4 (e) Fold 5
-Figure 12: Prediction vs Actual for Folds 1 to 5 for Transformer
-```
-```
-v
-```
-
+SEE PAPER FOR FIGURES

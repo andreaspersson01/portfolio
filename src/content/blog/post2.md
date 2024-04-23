@@ -1,16 +1,65 @@
 ---
-title: "Demo Post 2"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 11 2022"
-heroImage: "/post_img.webp"
+title: "2XU Compression Run Singapore 2024"
+description: "I ran the 2XU Compression Run in Singapore 2024. Click to read race report!"
+pubDate: "April 23 2024"
+heroImage: "https://static.wixstatic.com/media/6d7659_5782c4cd12b44d1caf7c3bcb62d35e68~mv2.jpeg/v1/fill/w_1022,h_576,fp_0.50_0.50,q_85,enc_auto/6d7659_5782c4cd12b44d1caf7c3bcb62d35e68~mv2.jpeg"
+badge: "Running"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+### Race Information
+* **Name:** 2XU Compression Run Singapore 2024
+* **Date:** April 21, 2024
+* **Distance:** 21.1 km
+* **Location:** Singapore
+* **Website:** https://2xurun.com/
+* **Strava:** https://www.strava.com/activities/11227151611
+* **Time:** 1:38:55
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+### Goals
+| Goal | Description | Completed? |
+|------|-------------|------------|
+| A | Sub 1:40:00 | *Yes* |
+| B | Sub 1:45:00 | *Yes* |
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+### Splits
+| Kilometer | Time |
+|------|------|
+|  1 | 4:46
+|  2 | 4:37
+|  3 | 4:49
+|  4 | 4:39
+|  5 | 4:40
+|  6 | 4:39
+|  7 | 4:53
+|  8 | 5:02
+|  9 | 4:51
+| 10 | 4:50
+| 11 | 4:58
+| 12 | 4:52
+| 13 | 4:54
+| 14 | 4:44
+| 15 | 4:39
+| 16 | 4:29
+| 17 | 4:37
+| 18 | 4:38
+| 19 | 4:40
+| 20 | 4:31
+| 21 | 4:31
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+### Training
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+This was a part of my training block leading up to Stockholm Marathon 2024. I've been running consistently for the last 2-3 months averaging around 40-50k/week with a peak of 65k. I have not tapered before the race having had 44k in my legs coming in to the race. I had a modest goal of completing the race sub 1:45:00 if I felt like my body was not feeling good for the day. However, I knew that I had sub 1:40:00 in me.  
+
+### Pre-race
+
+I woke up at 2:30 in the morning having only slept for 1.5h. This was not optimal but it is what is. I am currently living and studying in Singapore, NTU, so it was almost 1 hour commute to the race. I jogged down to the Pioneer busstation to catch the bus. Due to traffic the bus arrived only 15 minutes before the race started and I only had time to eat one banana and no warm-up.
+
+### Race
+
+The race started and it was crowded! I was aiming going out in a pace of 4:45/km which I held for the first 6k. 7-13 I was struggling to keep up the pace mentally and ended up falling behind my goal pace. At 13k I found a person running in a good pace that I decided to follow and I felt much stronger with 7k to go. I ended the race putting in really good splits which felt really good.
+
+### Post-race
+
+My legs felt a bit sore but honestly was expecting worse. Felt like a really good indication for my marathon. I was really happy going sub 1:40:00 for my first HM making it a PB! :) 
+
+Made with [race report generator](http://sfdavis.com/racereports/) created by /u/herumph.
