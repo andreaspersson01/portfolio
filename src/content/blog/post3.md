@@ -7,8 +7,6 @@ badge: "SC4001"
 tags: ["python", "NTU"]
 ---
 
-You can find the code and original paper here: https://github.com/andreaspersson01/SC4001
-
 ## 1 Introduction
 
 The financial marketplace embodies a paradigm of complexity and inherent unpredictability, affected
